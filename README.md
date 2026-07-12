@@ -1,16 +1,29 @@
 Projeto Price Watcher
 
-                    monitor_service
-                            ⬇
-                    store_resolver
-                            ⬇
-        amazon_service <-------------> Mercado Livre    
-            ⬇
-Client <------------> Parse 
-            ⬇
-        Sqlite
-            ⬇
-        Telegram
+                 +----------------+
+                 | monitor_service|
+                 +-------+--------+
+                         |
+                         ▼
+                 +---------------+
+                 |store_resolver |
+                 +-------+-------+
+                         |
+               +---------+---------+
+               |                   |
+               ▼                   ▼
+         Amazon Service      Mercado Livre
+               |
+         +-----+------+
+         |            |
+         ▼            ▼
+      Client       Parser
+               |
+               ▼
+            SQLite
+               |
+               ▼
+           Telegram
 
 Esse projeto não tem foco comercial. Seu foco é 100% estudo prático.
 O projeto consiste no monitoramento de preços em e-commerces, a ideia é que o usuário possa cadastrar um produto de determinada loja e receber alertas caso o preço abaixe e um alerta especial caso atinja um valor estipulado pelo usuário como preço alvo.
