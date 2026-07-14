@@ -1,7 +1,6 @@
 """Client Amazon - Responsavel por"""
 from bs4 import BeautifulSoup
 from html.parser import HTMLParser
-import config
 import logging
 from curl_cffi import requests
 logger = logging.getLogger(__name__)
