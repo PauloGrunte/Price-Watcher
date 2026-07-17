@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 import logging
-from log_config import configurarLogs
+from app.log_config import configurarLogs
 load_dotenv()
 configurarLogs()
 logger = logging.getLogger(__name__)

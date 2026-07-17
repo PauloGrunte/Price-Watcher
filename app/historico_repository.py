@@ -1,5 +1,5 @@
 import sqlite3
-import database
+import app.database as database
 def criarTabelaHistoricoDePreco():
     """Essa funcao sera chamada no começo da execucao para verificar se a tabela ja existe. Se não existir, irá criar"""
     database.alterarBase("""
@@ -27,7 +27,8 @@ def consultarUltimoPrecoDoProduto(idProduto):
     """Funcao utilizada para buscar o ultimo preco registrado de um produto usando o ID como criterio de busca"""
     parametroIDProduto = (idProduto,)
     resultado = database.consultarBase("""
-    SELECT valor,data_consulta from historico_de_precos WHERE id_produto = ?
+    SELECT valor,data_consulta from historico_de_precos
+    WHERE id_produto = ?
     ORDER BY data_consulta DESC LIMIT 1
     """,parametroIDProduto)
     return resultado
@@ -43,3 +44,4 @@ def consultarHistoricoDoProdutoNoIntervaloDeTempo(idProduto,quantidadeMeses):
     SELECT * FROM historico_de_precos WHERE id_produto = ?1 AND DATE(data_consulta) >= DATE('now','-'||?2|| ' month') 
     """,parametroIDProduto)
     return resultado
+inserirRegistroNoHistorico(idProduto=3,dataConsulta='2026-07-15 20:46:00',valor=159.0)

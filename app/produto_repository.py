@@ -1,5 +1,5 @@
 import sqlite3
-import database
+import app.database as database
 def criarTabelaProduto():
     """Essa funcao sera chamada no começo da execucao para verificar se a tabela ja existe. Se não existir, irá criar"""
     database.alterarBase("""
@@ -48,5 +48,3 @@ def listarTodosOsProdutos():
     """Consulta SQL para trazer todos os produtos cadastrados"""
     resultado = database.consultarBase("SELECT * from produto")
     return resultado
-resultado = consultarProduto(nome='nometeste')
-print(resultado)

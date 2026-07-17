@@ -1,8 +1,7 @@
 import sqlite3
 from functools import wraps
-import config
+import app.config as config
 import logging
-print(1 / 0)
 #logging.basicConfig(filename=config.logPath,level=logging.INFO,format='%(asctime)s - %(levelname)s - %(message)s')
 def conexaoBanco(func):
     @wraps(func)
