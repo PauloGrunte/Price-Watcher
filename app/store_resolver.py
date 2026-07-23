@@ -1,6 +1,6 @@
-from app.webSites.Amazon.service import obterDadosProduto
+from app.webSites.Amazon import service
 def storeResolver(url):
     if 'amazon' in url.lower():
-        return obterDadosProduto(url)     
+        return service    
     else:
         return None

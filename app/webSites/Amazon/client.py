@@ -33,4 +33,4 @@ def scraper(url):
             logger.info("[Scraper] sucesso ao criar o objeto.")
             return soup
         logger.error("[Scraper] retornando None pois o objeto nao pode ser criado")
-        return None
+    return None
