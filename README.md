@@ -51,7 +51,7 @@ Se o preço for menor que o anterior, envia uma mensagem ao usuário informando 
 A ideia é utilizar na prática conceitos de Python e persistencia de dados.
 
 Status do projeto:
-⚒️Em desenvolvimento
+* O projeto foi pausado pois o seu foco era apenas aprendizado de Python, Web Scraper e SQL porém começou a encontrar muitos problemas de bloqueios com necessidade do Captcha e aprofundar na trativa de erros de acesso web não estava no escopo de aprendizado previsto.
 Funcionalidades implementadas:
 ✔ Persistência SQLite
 
